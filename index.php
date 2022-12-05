@@ -12,6 +12,7 @@ $text = $telegram->Text();
 if ($text == "/start") {
     $option = [
         ["📚 Kurslarimiz", "📝 Ro'yxatdan o'tish"],
+
         ["📞 Biz bilan bog'lanish", "📩 Biz bilan aloqa"]
     ];
     $keyb = $telegram->buildKeyBoard($option,$resize=true);
