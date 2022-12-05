@@ -1,6 +1,7 @@
 <?php
 require_once Telegram.php;
 $e_message = "! Xatolik \n";
+
 try {
 $telegram =new Telegram("5866392319:AAGZ1tI3nsErE3KE9_YIPu9GkQfeVUgFX78");
 $chat_id = $telegram->ChatID();
