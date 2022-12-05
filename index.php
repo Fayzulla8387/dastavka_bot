@@ -12,6 +12,7 @@ if ($text == "/start") {
     $telegram->sendMessage($content);
 }
 } catch (Throwable $e) {
+
     $e_message .= $e->getMessage()."\n Qator-";
     $e_message .= $e->getLine()."\n File-";
     $e_message .= $e->getFile();
