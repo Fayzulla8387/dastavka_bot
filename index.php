@@ -1,5 +1,6 @@
 <?php
-require_once Telegram.php;
+
+require_once "Telegram.php";
 $e_message = "! Xatolik \n";
 
 try {
