@@ -10,7 +10,13 @@ $chat_id = $telegram->ChatID();
 $username = $telegram->Username();
 $text = $telegram->Text();
 if ($text == "/start") {
-    $content = array('chat_id' => $chat_id,  'text' => "Salom $username");
+    $option = [
+        ["📚 Kurslarimiz", "📝 Ro'yxatdan o'tish"],
+        ["📞 Biz bilan bog'lanish", "📩 Biz bilan aloqa"]
+    ];
+    $keyb = $telegram->buildKeyBoard($option);
+    $content = ['chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Assalomu alaykum, $username! \n\n Bizning botimizdan
+     foydalanish uchun quyidagi tugmalardan birini tanlang."];
     $telegram->sendMessage($content);
 }
 } catch (Throwable $e) {
