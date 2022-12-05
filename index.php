@@ -24,6 +24,7 @@ function sendMessage($text)
     global $chat_id, $telegram;
     $content = [
         'chat_id' => $chat_id,
+
         'text' => $text
     ];
     $telegram->sendMessage($content);
