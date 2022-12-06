@@ -15,9 +15,9 @@ if ($text == "/start") {
 
         ["📞 Biz bilan bog'lanish", "📩 Biz bilan aloqa"]
     ];
-    $keyb = $telegram->buildKeyBoard($option,$resize=true);
+    $keyb = $telegram->buildKeyBoard($option, $resize=true);
     $content = ['chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Assalomu alaykum, $username! \n\n Bizning botimizdan
-     foydalanish uchun quyidagi tugmalardan birini tanlang."];
+    foydalanish uchun quyidagi tugmalardan birini tanlang."];
     $telegram->sendMessage($content);
 }
 } catch (Throwable $e) {
