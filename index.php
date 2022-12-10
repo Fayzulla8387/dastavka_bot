@@ -31,6 +31,7 @@ if($text=="Orqaga qaytish" && $step=="birinchi"){
     $step="main";
     $content = ['chat_id' => $chat_id, 'reply_markup' =>$keyb, 'text' => "Assalomu alaykum, $username! \n\n Bizning botimizdan 
     foydalanish uchun quyidagi tugmalardan birini tanlang."];
+    $telegram->sendMessage($content);
 }
 } catch (Throwable $e) {
 
